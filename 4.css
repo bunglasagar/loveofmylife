@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGw3cXMzeml2YTBsaHd5bmJyOThraTE3OGR1M2tlb2Z0d2o2Y3QxZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XN8pBJ6HrLTOM/giphy.gif') center/cover no-repeat; /* Optional */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: cursive;
+}
+.heading {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px hotpink;
+}
+
+.puzzle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 2px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.puzzle-piece {
+  width: 150px;
+  height: 150px;
+  background-image: url('img6.jpg'); /* Use square image here */
+  background-size: 450px 450px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#success-message {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #d1006b;
+  background: #fff4f4;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid pink;
+  box-shadow: 0 0 10px hotpink;
+}

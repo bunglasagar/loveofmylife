@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find The Hidden Gift 🎁</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDg4dHlvcmNmOWFia3p4dHllc3RlZ2ZndWZpZ2h4ZTFibHo0YXZjNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/c76IJLufpNwSULPk77/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+    .title {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5rem;
+      color: #b30059;
+    }
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .gift-box {
+      width: 120px;
+      height: 120px;
+      background-color: #b22222;
+      border-radius: 12px;
+      cursor: pointer;
+      background-image: radial-gradient(#ffd700 4%, transparent 4%);
+      background-size: 20px 20px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .gift-box:hover {
+      transform: scale(1.1);
+    }
+
+    .fireworks::before, .fireworks::after {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      pointer-events: none;
+      background-image: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif');
+      background-size: cover;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="title">🎁 Find the Hidden Gift 🎁</h1>
+
+  <div class="box-container">
+    <div class="gift-box" onclick="revealGift(this, 0)">🎁</div>
+    <div class="gift-box" onclick="revealGift(this, 1)">🎁</div>
+    <div class="gift-box" onclick="revealGift(this, 2)">🎁</div>
+    <div class="gift-box" onclick="revealGift(this, 3)">🎁</div>
+    <div class="gift-box" onclick="revealGift(this, 4)">🎁</div>
+    <div class="gift-box" onclick="revealGift(this, 5)">🎁</div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_43ee32709a.mp3?filename=romantic-background-11751.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="fireworks"></div>
+
+  <script>
+    const messages = [
+      "oh ho mis laal chutney of 2025 ye wrong hai hehe",
+      "oh ho isme to sirf choclates hai hehe",
+      "Opsss ! ye to khali hai sagru ko dedo",
+      "I love youuuu sooo muchhhh meriii babyyyy girlllll 💘💘",
+      "aree waah isme to rasmalaii or milkcake hai yayayyy",
+      "Nazar na lage hamaare pyar ko 🧿❤️"
+    ];
+
+    function revealGift(element, index) {
+      if (element.innerText !== "🎁") return; // prevent repeat
+      element.innerText = messages[index];
+      element.style.backgroundColor = "#ff66a3"; // pink when opened
+      element.style.color = "#4b004b";
+      element.style.fontSize = "0.85rem";
+
+      // Make "I love you" more special
+      if (index === 3) {
+        element.style.fontSize = "1.1rem";
+        element.style.color = "#ff0066";
+        element.style.backgroundColor = "#fff0f5";
+      }
+    }
+  </script>
+
+</body>
+</html>

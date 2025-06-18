@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter 💌</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body class="fireworks-bg">
+ <!-- Floating Couple Photos -->
+<!-- Floating Circular Photos with unique animations -->
+<img src="img1.jpg" class="floating-img" style="left:10%; top:90%; animation: float1 12s linear infinite;">
+<img src="img2.jpg" class="floating-img" style="left:30%; top:80%; animation: float2 12s linear infinite;">
+<img src="img3.jpg" class="floating-img" style="left:60%; top:85%; animation: float3 12s linear infinite;">
+<img src="img4.jpg" class="floating-img" style="left:80%; top:88%; animation: float4 12s linear infinite;">
+<!-- LEFT HEART BUTTON -->
+<a href="3rd.html" class="heart-link left-btn">❤️</a>
+
+<!-- RIGHT HEART BUTTON -->
+<a href="4.html" class="heart-link right-btn">❤️</a>
+
+<!-- LEFT HEART BUTTON -->
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f65abdc196.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="love-letter-container">
+    <h1>Dear Tanisha 💖</h1>
+    <p id="letterText"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const text = `Dear babe , Its been 4 months since we are together and by the time i have got more closer to you , want to love you more .with you 
+    everything is just perfect , 
+    you are the best gift of my life i could ever get , you are the beach of my ocean , you are the leaves of my tree , you are the 
+    rain of my clouds , i love you so much my sweetheart , tu meriii rasgulliii ka chaasnii haii sweetuuuu
+
+Forever yours,
+Sagar 💌`;
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("letterText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    typeWriter();
+  </script>
+</body>
+</html>
